@@ -33,9 +33,9 @@ public class ImplAlumPort implements InterfazAlumPort {
 		AlumPort alumport = new AlumPort(); //tiene los valores de la clase AlumPort de los que cogeremos marca y modelo
 		String c;
 		if (alumport.getMarca().length()>3)
-			a=alumport.getMarca().substring(0,2);
+			a=alumport.getMarca().substring(0,3);
 		if (alumport.getModelo().length()>3)
-			b=alumport.getModelo().substring(0,2);
+			b=alumport.getModelo().substring(0,3);
 		c=a+"-"+b;
 		return c;
 	}
@@ -90,6 +90,10 @@ public class ImplAlumPort implements InterfazAlumPort {
 		}
 		return listAntigua;
 	}
+	//Para borrar un alumno podriamos hacerlo asi
+	// for (i=0; i<listaantigua.size; i++)
+	//  	if(alumport.getIdalumno==n) n es el numero que querria borrar
+	// 			listaantigua.remove(alumport)
 
 	/** 
 	 * Metodo para listar los alumnos
